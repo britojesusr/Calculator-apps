@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/calculadora.css">
+  <script type="text/javascript" src="calculadora.js"></script>
+
+</head>
+<body>
+
+  <main id="calculatorApp" class="calculator-app">
+
+    <nav id="navApp" class="nav-app" >
+      
+    <div>
+
+      <h1 id="title" class="title">Calculator</h1>
+      
+      <img src="./assets/arrow-symbolic-light.svg" alt="arrow toggle" class="icon-light">
+      
+      <img src="./assets/arrow-symbolic-dark.svg" alt="arrow toggle" class="icon-dark">
+
+    </div>     
+
+    <div>
+        
+        <img src="./assets/dark-mode-symbolic.svg" alt="" class="icon-light icon-swicth" onclick="darkmode()">
+        
+        <img src="./assets/light-mode-symbolic.svg" alt="" class="icon-dark icon-swicth" onclick="lightmode()">
+      
+    </div>
+      
+    <div class="window-opc">
+      
+        <img src="./assets/minimize-symbolic-light.svg" alt="minimize window" class="icon-light">
+
+        <img src="./assets/minimize-symbolic-dark.svg" alt="minimize window" class="icon-dark">
+      
+        <img src="./assets/maximize-symbolic-light.svg" alt="restore window" class="icon-light">
+
+        <img src="./assets/maximize-symbolic-dark.svg" alt="restore window" class="icon-dark">
+      
+        <img src="./assets/close-symbolic-light.svg" alt="close window" class="icon-light">
+
+        <img src="./assets/close-symbolic-dark.svg" alt="close window" class="icon-dark">
+      
+    </div>
+    
+    </nav>
+
+    <div class="display">
+
+      <input id="display" type="text" disabled value="0" class="bg-dark-light">
+      
+    </div>
+
+    <div class="input-calculator">
+
+      <input id="inputDisplay" type="text">
+
+    </div>
+
+    <div class="btn-inputs bg-dark-light">
+
+      <input type="button" value="7" class="btn" >
+      <input type="button" value="8" class="btn" >
+      <input type="button" value="9" class="btn" >
+      <input type="button" value="÷" class="btn" >
+      <input type="button" value="←" class="btn btn-undo" >
+      <input type="button" value="C" class="btn btn-clear" >
+      <input type="button" value="4" class="btn" >
+      <input type="button" value="5" class="btn" >
+      <input type="button" value="6" class="btn" >
+      <input type="button" value="×" class="btn" >
+      <input type="button" value="(" class="btn" >
+      <input type="button" value=")" class="btn" >
+      <input type="button" value="1" class="btn" >
+      <input type="button" value="2" class="btn" >
+      <input type="button" value="3" class="btn" >
+      <input type="button" value="-" class="btn" >
+      <input type="button" value="x²" class="btn" >
+      <input type="button" value="√" class="btn" >
+      <input type="button" value="0" class="btn" >
+      <input type="button" value="." class="btn" >
+      <input type="button" value="%" class="btn" >
+      <input type="button" value="+" class="btn" >
+      <input type="button" value="=" class="btn btn-result" >
+    
+    </div>
+
+
+  </main>
+
+  
+
+  
+</body>
+</html>
