@@ -9,8 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/calculadora.css">
-  <script type="text/javascript" src="calculadora.js"></script>
-
+ 
 </head>
 <body>
 
@@ -22,33 +21,31 @@
 
       <h1 id="title" class="title">Calculator</h1>
       
-      <img src="./assets/arrow-symbolic-light.svg" alt="arrow toggle" class="icon-light">
+      <img src="./assets/arrow-symbolic-light.svg" alt="arrow toggle" class="arrow-toggle">
       
-      <img src="./assets/arrow-symbolic-dark.svg" alt="arrow toggle" class="icon-dark">
-
     </div>     
 
     <div>
         
-        <img src="./assets/dark-mode-symbolic.svg" alt="" class="icon-light icon-swicth" onclick="darkmode()">
-        
-        <img src="./assets/light-mode-symbolic.svg" alt="" class="icon-dark icon-swicth" onclick="lightmode()">
-      
+        <img src="./assets/dark-mode-symbolic.svg" alt="" class="icon-moon">
+
+        <img src="./assets/light-mode-symbolic.svg" alt="" class="icon-sun inactive">
+              
     </div>
       
     <div class="window-opc">
       
-        <img src="./assets/minimize-symbolic-light.svg" alt="minimize window" class="icon-light">
+        <img src="./assets/minimize-symbolic-light.svg" alt="minimize window" class="icons-window">
 
-        <img src="./assets/minimize-symbolic-dark.svg" alt="minimize window" class="icon-dark">
+        <img src="./assets/minimize-symbolic-dark.svg" alt="minimize window" class="icons-window inactive">
+
+        <img src="./assets/maximize-symbolic-light.svg" alt="restore window" class="icons-window">
+        
+        <img src="./assets/maximize-symbolic-dark.svg" alt="restore window" class="icons-window inactive">
       
-        <img src="./assets/maximize-symbolic-light.svg" alt="restore window" class="icon-light">
+        <img src="./assets/close-symbolic-light.svg" alt="close window" class="icons-window">
 
-        <img src="./assets/maximize-symbolic-dark.svg" alt="restore window" class="icon-dark">
-      
-        <img src="./assets/close-symbolic-light.svg" alt="close window" class="icon-light">
-
-        <img src="./assets/close-symbolic-dark.svg" alt="close window" class="icon-dark">
+        <img src="./assets/close-symbolic-dark.svg" alt="close window" class="icons-window inactive">
       
     </div>
     
@@ -97,8 +94,6 @@
 
   </main>
 
-  
-
-  
+  <script type="text/javascript" src="calculadora.js"></script>  
 </body>
 </html>

@@ -44,6 +44,11 @@ body {
   place-items: center;
 }
 
+.inactive {
+
+  display: none;
+}
+
 .calculator-app{
 
   width: 450px;
@@ -92,6 +97,8 @@ body {
   cursor: pointer;
 }
 
+/*
+
 .menuToggleApp {
 
   display: none;
@@ -113,17 +120,15 @@ body {
 
 }
 
-.icon-swicth {
+*/
+
+.icon-moon,
+.icon-sun {
 
   justify-self: flex-end;
   width: 18px;
   height: 18px;
   cursor: pointer;
-}
-
-.icon-dark {
-  
-  display: none;
 }
 
 .window-opc {
