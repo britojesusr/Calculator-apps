@@ -13,17 +13,27 @@
 </head>
 <body>
 
-  <main id="calculatorApp" class="calculator-app">
+  <main id="calculatorApps" class="apps">
 
     <nav id="navApp" class="nav-app" >
       
     <div>
 
-      <h1 id="title" class="title">Calculator</h1>
+      <h1 id="title" class="title">Calculadora</h1>
       
       <img src="./assets/arrow-symbolic-light.svg" alt="arrow toggle" class="arrow-toggle">
       
-    </div>     
+    </div>
+    
+    <div class="menuToggleApp inactive">
+
+      <label for="titleCalculadora">Calculadora</label>
+      <input type="radio" name="apps" id="titleCalculadora" value="1" checked>
+
+      <label for="estadisticaB">Estadistica Bàsica</label>
+      <input type="radio" name="apps" id="estadisticaB" value="2">
+
+    </div>
 
     <div>
         
@@ -48,8 +58,22 @@
         <img src="./assets/close-symbolic-dark.svg" alt="close window" class="icons-window inactive">
       
     </div>
-    
+
     </nav>
+
+    <div class="cacl-estadistics inactive">
+
+      <select class="opc-estadistics" name="estadisticas" id="opcEstadistics">
+
+        <option value="1">Promedio</option>
+        <option value="2">Mediana</option>
+        <option value="3">Moda</option>
+
+      </select>
+
+      <button id="btnEstadistics" class="btn-estadistics">Calcular</button>
+
+    </div>
 
     <div class="display">
 
@@ -59,7 +83,7 @@
 
     <div class="input-calculator">
 
-      <input id="inputDisplay" type="text">
+      <input id="inputDisplay" type="text" value="" autocomplete="off">
 
     </div>
 
@@ -94,6 +118,9 @@
 
   </main>
 
-  <script type="text/javascript" src="calculadora.js"></script>  
+
+
+  <script type="text/javascript" src="apps.js"></script>
+  <script type="text/javascript" src="calculadora.js"></script>
 </body>
 </html>

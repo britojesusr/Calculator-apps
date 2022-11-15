@@ -28,12 +28,11 @@
   --sm: 14px;
   --md: 16px;
   --lg: 20px;
+  --xxl: 32px;
 }
-
 *{
   box-sizing: border-box;
 }
-
 body {
   font-family: 'Quicksand', sans-serif;
   margin: 0;
@@ -44,12 +43,7 @@ body {
   place-items: center;
 }
 
-.inactive {
-
-  display: none;
-}
-
-.calculator-app{
+.apps{
 
   width: 450px;
   height: 500px;
@@ -57,8 +51,10 @@ body {
   border: 1px solid var(--light-mode-border);
   border-radius: 5px 5px 0 0 ;
 
-  background-color: var(--light-mode-bg);
+  background-color: var(--light-mo￼de-bg);
 
+  display: grid;
+  grid-template-rows: 45px repeat(3, auto);
 }
 
 .nav-app{
@@ -78,61 +74,74 @@ body {
 
 .nav-app .title {
 
-  display: inline-block;
   color: var(--light-mode-text);  
   font-size: var(--md);
-  justify-self: center;
   margin-right: 10px;
 }
 
 .nav-app div:nth-child(1) {
 
+  position: absolute;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-self: center;
+}
+.nav-app div:nth-child(3) {
+
+  position: absolute;
+  right: 110px; 
 }
 
-.toggle {
+.arrow-toggle{
 
   cursor: pointer;
+  transition: 0.5s ;
+
 }
 
-/*
+.rotate{
+  transform: rotate(90deg);
+}
 
 .menuToggleApp {
-
-  display: none;
+  
+  width: 200px;
+  height: auto;
   position: absolute;
-  width: 180px;
-  height: 45px;
+  top: 47px;
+  justify-self: center;
   
-  top: 45px;
-  left: 100px;
-  padding: 0 8px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: 1fr 1fr;
+  gap: 12px;
+  align-items: center;
   
-
+  padding: 12px 12px;
+  
   border: 1px solid var(--light-mode-border);
   border-top: 0;
   background-color: var(--light-mode-nav-bg);
   color: var(--light-mode-text);
   font-size: var(--md);
   font-weight: bold;
+  text-align: left;
+
+
 
 }
-
-*/
 
 .icon-moon,
 .icon-sun {
 
-  justify-self: flex-end;
   width: 18px;
   height: 18px;
   cursor: pointer;
 }
 
 .window-opc {
-
+ 
+  justify-self: flex-end;
+  
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   justify-content: center;
@@ -161,12 +170,14 @@ body {
 
   width: 100%;
   height: 100%;
+  padding: 8px;
+
   
   background-color: var(--light-mode-display-bg);
   border: none;
   border-bottom: 1px solid var(--light-mode-border);
 
-  font-size: xx-large;
+  font-size: var(--xxl);
   font-weight: bold;
   text-align: right;
   color: var(--light-mode-text);
@@ -185,7 +196,10 @@ body {
   width: 100%;
   height: 60px;
 
+  font-size: var(--lg);
   font-weight: bold;
+  text-align: right;
+  padding: 8px;
 
   border: 1px solid var(--light-mode-border);
   border: none;
@@ -195,9 +209,8 @@ body {
 .btn-inputs { 
 
   width: 100%;
-  height: auto;
+  height: auto;  
   padding: 0 8px 8px;
-
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(4, 1fr);
@@ -219,26 +232,95 @@ body {
 
 .btn-inputs .btn:active {
 
-  box-shadow: inset 2px 2px 3px #c8d0e7, inset -2px -2px 3px #FFF;
+  background-color: var(--btn-calculate-result);
+  color: var(--white);
+
 }
 
+.btn-inputs .btn-clear:active {
+
+  background-color: var(--btn-clear);
+  color: var(--white);
+
+}
 
 .btn-undo {
 
   font-size: 28px;
   font-weight: bold;  
 }
+.btn-inputs .btn-undo:active {
+
+  background-color: var(--btn-clear);
+  color: var(--white);
+
+}
 
 .btn-inputs .btn-result{
 
   background-color: var(--btn-calculate-result);
   color: var(--white);
+  width: auto;  
+  grid-column: 5/7;  
+}
 
-  width: auto;
-  
-  grid-column: 5/7;
-  
+.btn-inputs .btn-clear{
+
+  background-color: var(--btn-clear);
+  color: var(--white);
 }
 
 /* DARK MODE _ LIGHT MODE */
 
+/* App Estadistica */
+
+.cacl-estadistics {
+
+  width: 100%;
+  height: 70px;
+
+  background-color: #F8F8F8;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  grid-row: 5/6 ;
+  align-self: flex-end;
+}
+
+.opc-estadistics{
+
+  width: 180px;
+  height: 40px;
+  padding: 10px;
+
+  color: var(--light-mode-text);
+  font-size: var(--md);
+  font-weight: bold;
+  
+  border: 1px solid var(--light-mode-border);
+  border-radius: 4px;
+  text-align: center;  
+}
+
+.btn-estadistics {
+
+  width: 180px;
+  height: 40px;
+  padding: 10px;
+
+  background-color: var(--btn-calculate-result);
+  color: var(--white);
+  border: none;
+  font-size: var(--md);
+  font-weight: bold;
+  border: 1px solid var(--light-mode-border);
+  border-radius: 4px;
+
+}
+
+
+.inactive {
+  display: none;
+}
