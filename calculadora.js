@@ -23,19 +23,17 @@ for ( let btn of btnInputs ) {
 
           break;
           
-        case "=": //
+        case "=": // extraer a una funcion calcOperation()
 
         const operacion = inputDisplay.value;                 
 
         if (operacion.includes('+')) {
 
-          const ubc = operacion.indexOf('+');
-          oprnd1 = Number(operacion.slice(0, ubc));
-          oprnd2 = Number(operacion.slice(ubc+1));
-          result = oprnd1 + oprnd2;
+          const sumandos = operacion.split('+');
+          const result = sumandos.reduce( (acumulado, actual) => Number(acumulado) + Number(actual));
 
-          display.value = result;
           inputDisplay.value = result;
+          display.value = `${operacion} = ${result}`;
         }      
 
           break;

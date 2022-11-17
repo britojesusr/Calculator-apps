@@ -61,20 +61,6 @@
 
     </nav>
 
-    <div class="cacl-estadistics inactive">
-
-      <select class="opc-estadistics" name="estadisticas" id="opcEstadistics">
-
-        <option value="1">Promedio</option>
-        <option value="2">Mediana</option>
-        <option value="3">Moda</option>
-
-      </select>
-
-      <button id="btnEstadistics" class="btn-estadistics">Calcular</button>
-
-    </div>
-
     <div class="display">
 
       <input id="display" type="text" disabled value="0" class="bg-dark-light">
@@ -115,12 +101,35 @@
     
     </div>
 
+    <div class="containerMsjEstadistics inactive">
+      <p id="msjCalcEstadistics" class="msg-cacl-estadistics ">Ingresa los valores separados por un guiòn ( - )</p>
+    </div>
+
+
+    <div class="cacl-estadistics inactive">
+
+      <select class="opc-estadistics" name="estadisticas" id="opcEstadistics">
+
+        <option value="1">Promedio</option>
+        <option value="2">Mediana</option>
+        <option value="3">Moda</option>
+
+      </select>
+
+      <button id="btnResetCalc" class="btn-reset">limpiar</button>
+      <button id="btnCalcEstadistics" class="btn-estadistics">Calcular</button>
+
+
+    </div>
+
 
   </main>
 
 
-
+  
   <script type="text/javascript" src="apps.js"></script>
   <script type="text/javascript" src="calculadora.js"></script>
+  <script type="text/javascript" src="estadistica.js"></script>
+  
 </body>
 </html>

@@ -125,9 +125,6 @@ body {
   font-size: var(--md);
   font-weight: bold;
   text-align: left;
-
-
-
 }
 
 .icon-moon,
@@ -181,8 +178,6 @@ body {
   font-weight: bold;
   text-align: right;
   color: var(--light-mode-text);
-
-
 }
 
 .input-calculator {
@@ -229,6 +224,19 @@ body {
 
   cursor: pointer;
 }
+
+.containerMsjEstadistics {
+
+  width: 100%;
+  height: auto;
+  padding: 0px 8px;
+
+  color: var(--light-mode-text);
+  font-weight: bold;
+  text-align: center;
+
+}
+
 
 .btn-inputs .btn:active {
 
@@ -306,7 +314,7 @@ body {
 
 .btn-estadistics {
 
-  width: 180px;
+  width: 90px;
   height: 40px;
   padding: 10px;
 
@@ -318,6 +326,21 @@ body {
   border: 1px solid var(--light-mode-border);
   border-radius: 4px;
 
+}
+
+.btn-reset {
+
+  width: 90px;
+  height: 40px;
+  padding: 10px;
+
+  background-color: var(--btn-clear);
+  color: var(--white);
+  border: none;
+  font-size: var(--md);
+  font-weight: bold;
+  border: 1px solid var(--light-mode-border);
+  border-radius: 4px;
 }
 
 

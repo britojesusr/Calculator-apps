@@ -9,6 +9,8 @@ const iconMoon = document.querySelector('.icon-moon');
 const iconSun = document.querySelector('.icon-sun');
 const iconsWindow = document.querySelectorAll('.icons-window');
 const divCaclEstadistics = document.querySelector('.cacl-estadistics');
+const containerMsjEstadistics = document.querySelector('.containerMsjEstadistics');
+const msjCalcEstadistics = document.querySelector('#msjCalcEstadistics');
 
 const display = document.querySelector('#display');
 const inputDisplay = document.querySelector('#inputDisplay');
@@ -42,19 +44,31 @@ function darkMode() {
 
   for (let i = 0; i < btnInputs.length; i++) {
 
-    if(i == 22) {
+    if(i == 5) {
+
+      btnInputs[5].style.backgroundColor = '#DC2D2D';
+      btnInputs[5].style.border='1px solid #252525';
+    }
+
+    else if (i == 22) {
 
       btnInputs[22].style.backgroundColor = '#6DB442';
-      btnInputs[22].style.border='1px solid #383838';
+      btnInputs[22].style.border='1px solid #252525';
     }
     
     else {
 
     btnInputs[i].style.backgroundColor = '#454545';
     btnInputs[i].style.color='#FFFFFF';
-    btnInputs[i].style.border='1px solid #383838';
+    btnInputs[i].style.border='1px solid #252525';
     }
   }
+
+  divCaclEstadistics.style.backgroundColor = '#3E3E3E';
+  msjCalcEstadistics.style.color = '#FFFFFF';
+
+  
+
 }
 
 function lightMode() {
@@ -83,7 +97,13 @@ function lightMode() {
 
   for (let i = 0; i < btnInputs.length; i++) {
 
-    if(i == 22) {
+    if(i == 5) {
+
+      btnInputs[5].style.backgroundColor = '#DC2D2D';
+      btnInputs[5].style.border='1px solid #C0C0C0';
+    }
+
+    else if(i == 22) {
 
       btnInputs[22].style.backgroundColor = '#6DB442';
       btnInputs[22].style.border='1px solid #C0C0C0';
@@ -96,6 +116,10 @@ function lightMode() {
     btnInputs[i].style.border='1px solid #C0C0C0';
     }
   }
+  divCaclEstadistics.style.backgroundColor = '#F8F8F8';
+  msjCalcEstadistics.style.color = '#6E7375';
+
+
 }
 
 function toggleApps () {
@@ -115,9 +139,8 @@ function changeApps() {
       arrowToggle.classList.remove('rotate');
       
       divCaclEstadistics.classList.add('inactive');
-      divBtnInput.classList.remove('inactive');
-      
-          
+      containerMsjEstadistics.classList.add('inactive');
+      divBtnInput.classList.remove('inactive');     
     }
 
     else if(this.value==2) {
@@ -128,13 +151,15 @@ function changeApps() {
       
       divBtnInput.classList.add('inactive');
       divCaclEstadistics.classList.remove('inactive');
+      containerMsjEstadistics.classList.remove('inactive');
+
       
     }
   }
 
 }
 
-for ( let radioButton of apps ) {
+for ( let radioButton of apps ) {  // Change App 
 
   radioButton.addEventListener('change', changeApps);
 }
